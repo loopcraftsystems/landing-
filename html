@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LoopCraft Systems | ITSM &amp; Intelligent Automation for Institutions</title>
+<meta name="description" content="ITSM implementation and workflow automation for EU public institutions and growing enterprises. Documented systems your team owns and runs. ITIL 4-aligned. Built in Estonia.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="canonical" href="https://loopcraftsystems.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://loopcraftsystems.com/">
+<meta property="og:site_name" content="LoopCraft Systems">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="LoopCraft Systems | ITSM &amp; Intelligent Automation for Institutions">
+<meta property="og:description" content="ITSM implementation and workflow automation for EU public institutions and growing enterprises. Documented systems your team owns and runs.">
+<meta property="og:image" content="https://loopcraftsystems.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="LoopCraft Systems — ITSM and intelligent automation for institutions">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LoopCraft Systems | ITSM &amp; Intelligent Automation for Institutions">
+<meta name="twitter:description" content="ITSM implementation and workflow automation for EU public institutions and growing enterprises.">
+<meta name="twitter:image" content="https://loopcraftsystems.com/og-image.jpg">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect width='500' height='500' fill='%230a0a0a'/%3E%3Cg stroke='%23fafafa' fill='none' stroke-width='14'%3E%3Ccircle cx='250' cy='220' r='110'/%3E%3Cline x1='235' y1='375' x2='370' y2='105'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ================================================================
+   LOOPCRAFT V4 : ANIMATED MONOCHROME GALLERY
+   Brand-led. No badges, no prices, no procurement language.
+   NO colored accents, ever.
+   ================================================================ */
+:root{
+  --bg:#0a0a0a; --ink:#fafafa; --muted:#a3a3a3; --faint:#5c5c5c;
+  --hair:#262626; --maxw:1280px;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+::selection{background:var(--ink);color:var(--bg)}
+a{color:var(--ink);text-decoration:none}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;font-weight:400;letter-spacing:-0.02em}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+@media(min-width:768px){.wrap{padding:0 56px}}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:90;mix-blend-mode:difference}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:76px}
+.logo{font-family:'Space Grotesk';letter-spacing:.16em;font-size:15px;font-weight:500;display:flex;align-items:center;gap:12px}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{font-size:13px;color:var(--ink);opacity:.65;transition:opacity .25s;position:relative}
+.nav-links a::after{
+  content:"";position:absolute;left:0;bottom:-4px;height:1px;width:0;
+  background:var(--ink);transition:width .35s var(--ease);
+}
+.nav-links a:hover{opacity:1}
+.nav-links a:hover::after{width:100%}
+.menu-btn{display:none;background:none;border:0;color:var(--ink);font-size:24px;line-height:1;cursor:pointer;padding:4px 6px}
+@media(max-width:860px){
+  .menu-btn{display:block}
+  .nav-links{
+    position:fixed;top:76px;left:0;right:0;
+    background:var(--bg);mix-blend-mode:normal;
+    flex-direction:column;align-items:flex-start;gap:0;
+    border-bottom:1px solid var(--hair);
+    padding:8px 24px 20px;
+    transform:translateY(-12px);opacity:0;pointer-events:none;
+    transition:opacity .3s var(--ease),transform .3s var(--ease);
+  }
+  .nav-links.open{transform:none;opacity:1;pointer-events:auto}
+  .nav-links a{font-size:15px;opacity:.85;padding:14px 0;width:100%;border-bottom:1px solid var(--hair)}
+  .nav-links a:last-child{border-bottom:0}
+}
+
+/* ---------- hero ---------- */
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.hero-grid{
+  position:absolute;inset:0;pointer-events:none;opacity:.35;
+  background:
+    linear-gradient(var(--hair) 1px,transparent 1px),
+    linear-gradient(90deg,var(--hair) 1px,transparent 1px);
+  background-size:120px 120px;
+  animation:griddrift 60s linear infinite;
+}
+@keyframes griddrift{to{background-position:120px 120px}}
+.hero .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:36px}
+.hero h1{font-size:clamp(44px,9vw,120px);line-height:.98;letter-spacing:-0.035em;max-width:12ch}
+.hero h1 .line{display:block;overflow:hidden}
+.hero h1 .line span{display:block;transform:translateY(110%);animation:riseup 1.1s var(--ease) forwards}
+.hero h1 .line:nth-child(2) span{animation-delay:.12s}
+.hero h1 .line:nth-child(3) span{animation-delay:.24s}
+@keyframes riseup{to{transform:none}}
+.hero .rotator{display:inline-block;min-width:6.5ch;color:var(--muted);font-style:normal}
+.hero .sub{
+  margin-top:44px;font-size:clamp(15px,1.6vw,19px);color:var(--muted);
+  max-width:46ch;opacity:0;animation:fadein 1s .7s var(--ease) forwards;
+}
+@keyframes fadein{to{opacity:1}}
+.hero .cta-row{margin-top:44px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;opacity:0;animation:fadein 1s .9s var(--ease) forwards}
+.btn{
+  display:inline-block;background:var(--ink);color:var(--bg);
+  font-size:14px;font-weight:500;padding:16px 38px;border:1px solid var(--ink);
+  border-radius:999px;font-family:inherit;
+  transition:background .25s,color .25s;cursor:pointer;
+}
+.btn:hover{background:transparent;color:var(--ink)}
+.btn-ghost{
+  display:inline-block;font-size:14px;font-weight:500;padding:16px 30px;
+  border:1px solid var(--hair);border-radius:999px;color:var(--ink);
+  transition:border-color .25s;
+}
+.btn-ghost:hover{border-color:var(--ink)}
+.hero .scroll-hint{
+  position:absolute;bottom:32px;left:50%;transform:translateX(-50%);
+  font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--faint);
+  animation:bob 2.4s ease-in-out infinite;
+}
+@keyframes bob{50%{transform:translate(-50%,8px)}}
+
+/* ---------- marquee : verbs, not badges ---------- */
+.marquee{
+  border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);
+  overflow:hidden;padding:22px 0;white-space:nowrap;
+}
+.marquee-track{display:inline-block;animation:scroll 28s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee span{
+  font-family:'Space Grotesk';font-size:14px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);padding:0 32px;
+}
+.marquee em{font-style:normal;color:var(--faint);padding:0 4px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- sections ---------- */
+section{padding:140px 0}
+@media(max-width:767px){section{padding:88px 0}}
+.chapter{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);display:block;margin-bottom:28px}
+.sec-head{font-size:clamp(26px,4.2vw,48px);line-height:1.1;max-width:22ch;margin-bottom:20px}
+.sec-lead{font-size:15px;color:var(--muted);max-width:56ch}
+
+/* ---------- statement ---------- */
+.statement h2{font-size:clamp(26px,4.2vw,54px);line-height:1.18;max-width:26ch}
+.statement h2 .w{display:inline-block;opacity:.12;transition:opacity .6s var(--ease)}
+.statement h2 .w.lit{opacity:1}
+.statement .after{margin-top:48px;font-size:15px;color:var(--muted);max-width:52ch}
+
+/* ---------- principle grid (philosophy) ---------- */
+.grid4{display:grid;gap:1px;background:var(--hair);border:1px solid var(--hair);margin-top:56px}
+@media(min-width:640px){.grid4{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.grid4{grid-template-columns:repeat(4,1fr)}}
+.cell{background:var(--bg);padding:36px 30px;transition:background .35s}
+.cell:hover{background:#111}
+.cell .num{font-family:'Space Grotesk';font-size:12px;letter-spacing:.2em;color:var(--faint);display:block;margin-bottom:22px}
+.cell h3{font-size:20px;margin-bottom:12px}
+.cell p{font-size:13.5px;color:var(--muted)}
+
+/* ---------- methodology (LOOP) ---------- */
+.phase{
+  display:grid;grid-template-columns:96px 1fr;gap:32px;
+  border-top:1px solid var(--hair);padding:44px 0;
+}
+.phase:last-child{border-bottom:1px solid var(--hair)}
+.phase .glyph{
+  font-family:'Space Grotesk';font-weight:300;font-size:clamp(40px,6vw,72px);
+  line-height:1;color:transparent;-webkit-text-stroke:1px var(--faint);
+  transition:-webkit-text-stroke-color .4s;
+}
+.phase:hover .glyph{-webkit-text-stroke-color:var(--ink)}
+.phase h3{font-size:clamp(19px,2.4vw,26px);margin-bottom:6px}
+.phase h3 small{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);font-weight:400;margin-top:8px;font-family:'Inter'}
+.phase p{font-size:14px;color:var(--muted);max-width:70ch;margin-top:14px}
+@media(max-width:600px){.phase{grid-template-columns:1fr;gap:14px}}
+
+/* ---------- services ---------- */
+.svc-row{border-top:1px solid var(--hair)}
+.svc{
+  border-bottom:1px solid var(--hair);
+  display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:24px;
+  padding:44px 0;cursor:pointer;position:relative;
+  transition:padding-left .4s var(--ease);
+}
+@media(min-width:768px){.svc:hover{padding-left:24px}}
+.svc .idx{font-family:'Space Grotesk';font-size:13px;color:var(--faint)}
+.svc h3{font-size:clamp(22px,3.4vw,40px);letter-spacing:-0.02em}
+.svc .hint{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);white-space:nowrap}
+.svc .desc{
+  grid-column:2/4;font-size:14px;color:var(--muted);max-width:64ch;
+  max-height:0;overflow:hidden;transition:max-height .5s var(--ease),margin .5s var(--ease);
+}
+.svc:hover .desc,.svc:focus-within .desc{max-height:320px;margin-top:14px}
+.svc .desc ul{list-style:none;margin-top:14px}
+.svc .desc li{padding:8px 0;border-top:1px solid var(--hair);font-size:13.5px;color:var(--muted)}
+.svc .desc li::before{content:"→ ";color:var(--ink)}
+@media(max-width:767px){.svc .desc{max-height:none;margin-top:8px}}
+.svc .arrow{
+  position:absolute;right:0;top:44px;font-size:22px;color:var(--faint);
+  transition:transform .4s var(--ease),color .3s;
+}
+.svc:hover .arrow{transform:translateX(8px);color:var(--ink)}
+
+/* ---------- benefits pills ---------- */
+.pills{display:flex;flex-wrap:wrap;gap:12px;margin-top:48px}
+.pill{
+  border:1px solid var(--hair);border-radius:999px;padding:8px 18px;
+  font-size:12.5px;color:var(--muted);transition:border-color .3s,color .3s;
+}
+.pill:hover{border-color:var(--faint);color:var(--ink)}
+.pill strong{color:var(--ink);font-weight:500;margin-right:8px}
+
+/* ---------- approach : inverse band ---------- */
+.approach{background:var(--ink);color:var(--bg);padding:120px 0}
+.approach .chapter{color:#8a8a8a}
+.approach h2{font-size:clamp(26px,4vw,52px);max-width:20ch;line-height:1.2}
+.approach h2 em{font-style:normal;color:#9a9a9a}
+
+/* ---------- work ---------- */
+.eng-note{
+  font-size:13px;color:var(--muted);border:1px solid var(--hair);
+  border-left:2px solid var(--ink);padding:14px 20px;margin-bottom:32px;max-width:760px;
+}
+.work-grid{display:grid;gap:1px;background:var(--hair);border:1px solid var(--hair)}
+@media(min-width:768px){.work-grid{grid-template-columns:repeat(3,1fr)}}
+.work{
+  background:var(--bg);padding:44px 32px;position:relative;overflow:hidden;
+}
+.work::before{
+  content:"";position:absolute;inset:0;background:var(--ink);
+  transform:translateY(101%);transition:transform .45s var(--ease);
+}
+.work:hover::before{transform:none}
+.work>*{position:relative;z-index:1;transition:color .35s}
+.work .sector{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+.work .rep{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);border:1px solid var(--hair);padding:3px 9px;border-radius:999px;display:inline-block;margin:14px 0}
+.work h3{font-size:19px;line-height:1.3;margin-bottom:10px}
+.work p{font-size:13.5px;color:var(--muted)}
+.work .outcome{margin-top:16px;padding-top:14px;border-top:1px solid var(--hair);font-size:13px;color:var(--muted)}
+.work .outcome strong{color:var(--ink);display:block;margin-bottom:4px;font-weight:500}
+.work:hover .sector,.work:hover .rep,.work:hover p,.work:hover .outcome{color:#3d3d3d}
+.work:hover h3,.work:hover .outcome strong{color:var(--bg)}
+.work:hover .rep{border-color:#c9c9c9}
+.work:hover .outcome{border-color:#c9c9c9}
+
+/* ---------- contact ---------- */
+.contact{text-align:center;padding:160px 0}
+.contact h2{font-size:clamp(34px,6vw,84px);letter-spacing:-0.03em;line-height:1.02;margin-bottom:24px}
+.contact p{color:var(--muted);max-width:48ch;margin:0 auto 40px;font-size:15px}
+.contact .email{
+  font-family:'Space Grotesk';font-size:clamp(17px,2.4vw,26px);
+  border-bottom:1px solid var(--hair);padding-bottom:5px;transition:border-color .3s;
+}
+.contact .email:hover{border-color:var(--ink)}
+/* form */
+.c-form{max-width:560px;margin:56px auto 0;text-align:left}
+.field{margin-bottom:22px}
+.field label{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:10px}
+.field input,.field textarea{
+  width:100%;background:transparent;border:0;border-bottom:1px solid var(--hair);
+  color:var(--ink);font-family:inherit;font-size:16px;padding:12px 2px;transition:border-color .3s;
+}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--ink)}
+.field textarea{min-height:120px;resize:vertical}
+.c-form .btn{width:100%;margin-top:8px}
+.form-note{margin-top:18px;font-size:12px;color:var(--faint);text-align:center}
+.contact .note{margin-top:40px;font-size:12px;color:var(--faint)}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--hair);overflow:hidden}
+.giant{white-space:nowrap;padding:48px 0 32px}
+.giant-track{display:inline-block;animation:scroll 40s linear infinite}
+.giant span{
+  font-family:'Space Grotesk';font-size:clamp(72px,14vw,180px);
+  letter-spacing:-0.02em;padding:0 40px;
+  color:transparent;-webkit-text-stroke:1px var(--hair);
+  transition:-webkit-text-stroke-color .4s;
+}
+.giant:hover span{-webkit-text-stroke-color:var(--faint)}
+.foot-row{
+  border-top:1px solid var(--hair);
+  display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center;
+  padding:28px 0;
+}
+.foot-row a,.foot-row span{font-size:12px;color:var(--faint)}
+.foot-row a:hover{color:var(--ink)}
+.foot-links{display:flex;gap:24px;flex-wrap:wrap}
+.entity{border-top:1px solid var(--hair)}
+.entity .wrap{padding-top:24px;padding-bottom:36px;font-size:12px;color:var(--faint);line-height:1.9}
+.entity strong{color:var(--muted);font-weight:500}
+
+/* ---------- consent banner ---------- */
+#consent{
+  position:fixed;bottom:0;left:0;right:0;z-index:100;
+  background:#111;border-top:1px solid var(--hair);padding:18px 0;display:none;
+}
+#consent.show{display:block}
+#consent .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+#consent p{font-size:12.5px;color:var(--muted);max-width:680px}
+#consent .actions{display:flex;gap:10px}
+#consent button{
+  font-family:inherit;font-size:13px;font-weight:500;padding:10px 22px;
+  border-radius:999px;cursor:pointer;
+}
+#consent .accept{background:var(--ink);color:var(--bg);border:1px solid var(--ink)}
+#consent .decline{background:transparent;color:var(--muted);border:1px solid var(--hair)}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .reveal,.hero h1 .line span,.hero .sub,.hero .cta-row{opacity:1;transform:none}
+  .statement h2 .w{opacity:1}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": "https://loopcraftsystems.com/#organization",
+      "name": "LoopCraft Systems OÜ",
+      "alternateName": "LoopCraft",
+      "url": "https://loopcraftsystems.com/",
+      "email": "contact@loopcraftsystems.com",
+      "description": "LoopCraft Systems maps, redesigns, and automates the processes holding institutions back — delivering ITSM implementations and workflow automation that are fully documented and owned by the client. ITIL 4-aligned. Built in Estonia for EU public institutions and growing enterprises.",
+      "foundingDate": "2026",
+      "slogan": "We simplify how institutions work.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tallinn",
+        "addressCountry": "EE"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "European Union"
+      },
+      "knowsAbout": [
+        "IT Service Management (ITSM)",
+        "ITIL 4",
+        "Workflow automation",
+        "AI agents",
+        "Business process digitalisation",
+        "Service desk implementation",
+        "Digital transformation for public sector"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "LoopCraft Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Service Desk Implementation",
+              "description": "A working service desk built on ITIL 4 practice: ticket intake, routing, and service visibility, delivered with the runbooks your team needs to operate it on day one."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Workflow Automation",
+              "description": "The repetitive work between your tools, automated. Document intake, approvals, routing, and reporting — tested and shipped with full trigger and rollback documentation."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Process Documentation & Handover",
+              "description": "Process maps, operating procedures, and governance that survive staff turnover and audits. Every engagement ends with your team running the system."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://loopcraftsystems.com/#website",
+      "url": "https://loopcraftsystems.com/",
+      "name": "LoopCraft Systems",
+      "publisher": { "@id": "https://loopcraftsystems.com/#organization" },
+      "inLanguage": "en-GB"
+    }
+  ]
+}
+</script>
+</head>
+<body id="top">
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="LoopCraft — home">
+      <svg viewBox="80 35 340 350" width="30" height="30" aria-hidden="true"><g stroke="currentColor" fill="none" stroke-width="14"><circle cx="250" cy="220" r="110"/><line x1="235" y1="375" x2="370" y2="105"/></g></svg>
+      <span>LOOPCRAFT</span></a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">≡</button>
+    <div class="nav-links" id="nav-links">
+      <a href="#philosophy">Philosophy</a>
+      <a href="#methodology">Methodology</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero-grid"></div>
+  <div class="wrap">
+    <h1>
+      <span class="line"><span>We</span></span>
+      <span class="line"><span><em class="rotator" id="rotator">automate</em></span></span>
+      <span class="line"><span>the way institutions work.</span></span>
+    </h1>
+    <p class="sub">Service management and workflow automation for public institutions and growing enterprises. Everything we build stays yours: documented, owned, and running without us.</p>
+    <div class="cta-row">
+      <a href="#contact" class="btn">Start a conversation</a>
+      <a href="#methodology" class="btn-ghost">See how we work</a>
+    </div>
+  </div>
+  <span class="scroll-hint">Scroll</span>
+</header>
+
+<!-- ============ MARQUEE : what we do, not badges ============ -->
+<div class="marquee" aria-label="Map, redesign, automate, document, hand over">
+  <div class="marquee-track" id="marquee-track">
+    <span>Map<em>·</em></span><span>Redesign<em>·</em></span><span>Automate<em>·</em></span><span>Document<em>·</em></span><span>Hand over<em>·</em></span>
+  </div>
+</div>
+
+<!-- ============ STATEMENT ============ -->
+<section class="statement">
+  <div class="wrap reveal">
+    <h2 id="statement-text">We map, redesign, and automate the processes holding institutions back. Not slides. Working, documented systems your team owns and runs without us.</h2>
+  </div>
+</section>
+
+<!-- ============ PHILOSOPHY ============ -->
+<section id="philosophy">
+  <div class="wrap reveal">
+    <h2 class="sec-head">Built on principles that endure</h2>
+    <div class="grid4">
+      <div class="cell">
+        <span class="num">01</span>
+        <h3>Collaboration</h3>
+        <p>Empower teams through connection. We simplify complexity by integrating the tools and workflows that enable seamless collaboration across your organisation.</p>
+      </div>
+      <div class="cell">
+        <span class="num">02</span>
+        <h3>Continuity</h3>
+        <p>Evolve without disruption. Systems should grow with you. We build platforms that maintain operational excellence, aligned with ITIL 4 standards.</p>
+      </div>
+      <div class="cell">
+        <span class="num">03</span>
+        <h3>Purpose</h3>
+        <p>Innovate with intention. Every implementation serves a clear objective. Structured frameworks meet strategic thinking to deliver transformation that matters.</p>
+      </div>
+      <div class="cell">
+        <span class="num">04</span>
+        <h3>Integrity</h3>
+        <p>Deliver on commitment. Trust is earned through consistent execution. We provide tailored solutions with measurable value and lasting impact.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ METHODOLOGY : THE LOOP FRAMEWORK ============ -->
+<section id="methodology">
+  <div class="wrap reveal">
+    <h2 class="sec-head">The LOOP Framework&trade;</h2>
+    <p class="sec-lead">Every LoopCraft engagement runs through the same four phases. Documented, governed, and auditable from discovery to steady state.</p>
+    <div style="margin-top:48px">
+      <div class="phase">
+        <div class="glyph" aria-hidden="true">L</div>
+        <div>
+          <h3>Listen &amp; Learn <small>Phase 01 — Discovery</small></h3>
+          <p>We start with a 90-minute structured discovery session. Every manual process consuming more than two hours per week gets mapped. You receive an AI Maturity Scorecard across 12 dimensions, your top three automation opportunities ranked by ROI and feasibility, and a full tool-stack compatibility audit.</p>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="glyph" aria-hidden="true">O</div>
+        <div>
+          <h3>Orchestrate &amp; Optimise <small>Phase 02 — Design</small></h3>
+          <p>Design before you build. We produce a full agent architecture, an automation specification for each workflow, and a data-flow map from input through to memory. Every prototype runs in a sandbox environment. Client sign-off happens before a single line of production code is written.</p>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="glyph" aria-hidden="true">O</div>
+        <div>
+          <h3>Operate &amp; Automate <small>Phase 03 — Delivery</small></h3>
+          <p>We build, test, and ship fully documented workflows. Every flow follows the same internal quality loop, and each agent action is logged. Clients get a real-time operator dashboard. Three full test runs per workflow before handover, with complete trigger, logic, and rollback documentation.</p>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="glyph" aria-hidden="true">P</div>
+        <div>
+          <h3>Prove &amp; Perpetuate <small>Phase 04 — Assurance</small></h3>
+          <p>We tie three to five KPIs directly to business outcomes. Week one includes daily check-ins and same-day hotfixes. Weeks two through four include weekly KPI reviews. The system gets smarter over time. Retainer clients receive a monthly report and a quarterly strategy review.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="wrap reveal">
+    <h2 class="sec-head">Three services. One niche.</h2>
+    <p class="sec-lead">One connected operational architecture for organisations that answer to evaluators, auditors, and citizens.</p>
+    <div class="svc-row" style="margin-top:40px">
+      <div class="svc" tabindex="0">
+        <span class="idx">01</span>
+        <h3>Service Desk Implementation</h3>
+        <span class="hint">The Foundation</span>
+        <span class="arrow">→</span>
+        <div class="desc">
+          A working service desk built on ITIL 4 practice: ticket intake, routing, and service visibility, delivered with the runbooks your team needs to operate it on day one.
+          <ul>
+            <li>End-to-end process mapping</li>
+            <li>Ticket intake, routing &amp; SLAs</li>
+            <li>Service visibility dashboards</li>
+            <li>Governance frameworks &amp; runbooks</li>
+          </ul>
+        </div>
+      </div>
+      <div class="svc" tabindex="0">
+        <span class="idx">02</span>
+        <h3>Workflow Automation</h3>
+        <span class="hint">The Engine</span>
+        <span class="arrow">→</span>
+        <div class="desc">
+          The repetitive work between your tools, automated. Document intake, approvals, routing, and reporting — built in a sandbox, tested, then shipped with full trigger and rollback documentation.
+          <ul>
+            <li>Workflow automation design &amp; build</li>
+            <li>AI agent architecture &amp; integration</li>
+            <li>Logged, auditable agent operations</li>
+            <li>Operator dashboards &amp; KPI instrumentation</li>
+          </ul>
+        </div>
+      </div>
+      <div class="svc" tabindex="0">
+        <span class="idx">03</span>
+        <h3>Process Documentation &amp; Handover</h3>
+        <span class="hint">The Guarantee</span>
+        <span class="arrow">→</span>
+        <div class="desc">
+          Process maps, operating procedures, and governance that survive staff turnover and audits. Every engagement ends with your team running the system, not depending on us.
+          <ul>
+            <li>Process maps &amp; operating procedures</li>
+            <li>Access, roles &amp; governance design</li>
+            <li>Adoption playbooks &amp; team enablement</li>
+            <li>Audit-ready documentation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="pills" role="list" aria-label="Key benefits">
+      <span class="pill" role="listitem"><strong>Efficiency</strong>Faster resolution, frictionless handoffs</span>
+      <span class="pill" role="listitem"><strong>Visibility</strong>Full performance visibility via dashboards</span>
+      <span class="pill" role="listitem"><strong>Scalability</strong>Platforms designed for future-proof growth</span>
+      <span class="pill" role="listitem"><strong>Governance</strong>Audit-ready ITIL 4 governance from day one</span>
+      <span class="pill" role="listitem"><strong>Intelligence</strong>AI that integrates and drives measurable impact</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APPROACH : INVERSE BAND ============ -->
+<section class="approach">
+  <div class="wrap reveal">
+    <span class="chapter">Principle</span>
+    <h2>Design before build. <em>Sign-off before production.</em> Documentation before handover.</h2>
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section id="work">
+  <div class="wrap reveal">
+    <h2 class="sec-head">The problems we solve</h2>
+    <p class="eng-note">The profiles below are representative of the situations LoopCraft is built to address. Named references and verified metrics are provided during procurement on request.</p>
+    <div class="work-grid">
+      <div class="work">
+        <h3>Service Desk Transformation</h3>
+        <p>Manual ticket routing and no service visibility across departments.</p>
+        <div class="outcome"><strong>Our approach</strong>A consolidated service desk aligned with ITIL 4, automated routing with logged actions, and a performance dashboard for department leads — with client-owned runbooks.</div>
+      </div>
+      <div class="work">
+        <h3>Automated Lead Intelligence</h3>
+        <p>High-value leads lost to slow response and manual qualification after hours.</p>
+        <div class="outcome"><strong>Our approach</strong>Around-the-clock intake and qualification with human sign-off, an audit trail, and same-day handover to fee earners — fully documented.</div>
+      </div>
+      <div class="work">
+        <h3>Connected Workspace</h3>
+        <p>Rapid scaling led to tool sprawl and information silos.</p>
+        <div class="outcome"><strong>Our approach</strong>A consolidated tool stack, a single knowledge architecture, and a governance model that survives the next stage of growth.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap reveal">
+    <h2 class="sec-head">Your digitalisation partner</h2>
+    <p class="sec-lead">LoopCraft specialises in Business Digitalisation. We help institutions and growing enterprises map, redesign, and automate their core processes so their teams can focus on work that matters. A focused methodology, a tight service scope, and a clear outcome: your organisation runs better, faster, and without unnecessary manual load.</p>
+    <div class="grid4">
+      <div class="cell"><span class="num">01</span><h3>Empower Collaboration</h3><p>Simplifying complexity through connected tools and optimised workflows.</p></div>
+      <div class="cell"><span class="num">02</span><h3>Evolve Continuously</h3><p>Maintain, evolve, and future-proof your digital platforms, aligned with ITIL 4.</p></div>
+      <div class="cell"><span class="num">03</span><h3>Innovate with Purpose</h3><p>Structured frameworks meet creative thinking for digital transformation.</p></div>
+      <div class="cell"><span class="num">04</span><h3>Partner with Integrity</h3><p>Tailored solutions, seamless integration, and measurable value.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="contact">
+  <div class="wrap reveal">
+    <h2>Ready when you are.</h2>
+    <p>Start a conversation — the first step of The LOOP Framework&trade;. You leave with an AI Maturity Scorecard and your top three automation opportunities, whether or not we work together.</p>
+    <a class="email" href="mailto:contact@loopcraftsystems.com">contact@loopcraftsystems.com</a>
+
+    <form class="c-form" id="contact-form" aria-label="Contact form" novalidate>
+      <div class="field">
+        <label for="f-name">Full Name *</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="f-company">Organisation</label>
+        <input id="f-company" name="company" type="text" autocomplete="organization">
+      </div>
+      <div class="field">
+        <label for="f-email">Email Address *</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="f-message">What are you trying to digitalise? *</label>
+        <textarea id="f-message" name="message" required></textarea>
+      </div>
+      <button class="btn" type="submit">Start a conversation</button>
+      <p class="form-note">Submitting opens a pre-filled email to contact@loopcraftsystems.com. We reply within one business day. All project discussions are confidential by default.</p>
+    </form>
+    <p class="note">Available across EU time zones, Monday to Friday</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="giant" aria-hidden="true">
+    <div class="giant-track" id="giant-track">
+      <span>LOOPCRAFT</span><span>LOOPCRAFT</span><span>LOOPCRAFT</span>
+    </div>
+  </div>
+  <div class="wrap foot-row">
+    <div class="foot-links">
+      <a href="#philosophy">Philosophy</a>
+      <a href="#methodology">Methodology</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="foot-links">
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms of Service</a>
+    </div>
+    <span>© 2026 LOOPCRAFT SYSTEMS OÜ</span>
+  </div>
+  <div class="entity">
+    <div class="wrap">
+      <strong>LoopCraft Systems OÜ</strong> · Registry code [FILL] · VAT [FILL] · Tallinn, Estonia ·
+      <a href="mailto:contact@loopcraftsystems.com" style="color:var(--muted)">contact@loopcraftsystems.com</a><br>
+      The LOOP Framework&trade; is a trademark of LoopCraft Systems OÜ.
+    </div>
+  </div>
+</footer>
+
+<!-- ============ CONSENT BANNER ============ -->
+<div id="consent" role="dialog" aria-label="Cookie consent" aria-live="polite">
+  <div class="wrap">
+    <p>We use privacy-respecting analytics (PostHog, EU-hosted) to understand how this site is used. No data leaves the EU. You can decline and still use all features. <a href="/privacy" style="color:var(--ink)">Privacy Policy</a></p>
+    <div class="actions">
+      <button class="accept" id="consent-accept">Accept</button>
+      <button class="decline" id="consent-decline">Decline</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+/* Mobile nav toggle */
+var mBtn=document.getElementById('menu-btn'),mLinks=document.getElementById('nav-links');
+mBtn.addEventListener('click',function(){
+  var open=mLinks.classList.toggle('open');
+  mBtn.setAttribute('aria-expanded',open?'true':'false');
+});
+mLinks.addEventListener('click',function(e){
+  if(e.target.tagName==='A'){mLinks.classList.remove('open');mBtn.setAttribute('aria-expanded','false');}
+});
+
+/* Giant footer marquee: already wider than the viewport, so one duplicate is enough */
+(function(){ var t=document.getElementById('giant-track'); t.innerHTML+=t.innerHTML; })();
+
+/* Verb marquee: grow one half until it fills the viewport, then mirror it so
+   translateX(-50%) loops with no visible gap. */
+function buildMarquee(){
+  var t=document.getElementById('marquee-track');
+  var base=t.dataset.base||(t.dataset.base=t.innerHTML);
+  var half=base;
+  t.innerHTML=half;
+  var guard=0;
+  while(t.scrollWidth < window.innerWidth*1.2 && guard++ < 40){ half+=base; t.innerHTML=half; }
+  half+=base; // extra set so the seam is always off-screen
+  t.innerHTML=half+half;
+}
+buildMarquee();
+var rt; window.addEventListener('resize',function(){ clearTimeout(rt); rt=setTimeout(buildMarquee,200); },{passive:true});
+
+/* Hero word rotator */
+var words=['automate','digitalise','document','simplify'];
+var wi=0;
+var rot=document.getElementById('rotator');
+setInterval(function(){
+  rot.style.transition='opacity .35s';
+  rot.style.opacity=0;
+  setTimeout(function(){ wi=(wi+1)%words.length; rot.textContent=words[wi]; rot.style.opacity=1; },380);
+},3200);
+
+/* Statement: word-by-word light-up on scroll */
+var st=document.getElementById('statement-text');
+st.innerHTML=st.textContent.split(' ').map(function(w){return '<span class="w">'+w+'</span>';}).join(' ');
+var ws=[].slice.call(st.querySelectorAll('.w'));
+function lightWords(){
+  var r=st.getBoundingClientRect();
+  var p=Math.min(1,Math.max(0,(window.innerHeight*0.85-r.top)/(r.height+window.innerHeight*0.35)));
+  var n=Math.floor(p*ws.length);
+  ws.forEach(function(w,i){ w.classList.toggle('lit',i<n); });
+}
+window.addEventListener('scroll',lightWords,{passive:true}); lightWords();
+
+/* Scroll reveal */
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target);} });
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+/* Contact form → mailto builder (graceful degradation until an API route exists) */
+document.getElementById('contact-form').addEventListener('submit',function(e){
+  e.preventDefault();
+  var name=document.getElementById('f-name').value.trim(),
+      company=document.getElementById('f-company').value.trim(),
+      email=document.getElementById('f-email').value.trim(),
+      msg=document.getElementById('f-message').value.trim();
+  if(!name||!email||!msg){alert('Please fill in your name, email, and message.');return;}
+  var subject='Discovery session request — '+name+(company?' ('+company+')':'');
+  var body='Name: '+name+'\nOrganisation: '+(company||'—')+'\nEmail: '+email+'\n\n'+msg;
+  window.location.href='mailto:contact@loopcraftsystems.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+  if(window.posthog){posthog.capture('contact_form_submitted',{has_company:!!company});}
+});
+
+/* Consent-gated PostHog (EU host). Cookie-based — no localStorage. */
+var CONSENT_COOKIE='lc_consent';
+function getConsent(){
+  var m=document.cookie.match(new RegExp('(?:^|; )'+CONSENT_COOKIE+'=([^;]*)'));
+  return m?m[1]:null;
+}
+function setConsent(v){
+  document.cookie=CONSENT_COOKIE+'='+v+'; max-age=15552000; path=/; SameSite=Lax';
+}
+function initPostHog(){
+  if(window.posthog && window.posthog.__loaded)return;
+  !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+  posthog.init('phc_x9eVjjJt85wC4oGYgudE3hRCpzYkj4aWiwxbJ3b7nPUy',{
+    api_host:'https://eu.i.posthog.com',
+    person_profiles:'identified_only',
+    capture_pageview:true
+  });
+}
+
+var banner=document.getElementById('consent');
+var stored=getConsent();
+if(stored==='accepted'){initPostHog();}
+else if(stored===null){banner.classList.add('show');}
+
+document.getElementById('consent-accept').addEventListener('click',function(){
+  setConsent('accepted');banner.classList.remove('show');initPostHog();
+});
+document.getElementById('consent-decline').addEventListener('click',function(){
+  setConsent('declined');banner.classList.remove('show');
+});
+})();
+</script>
+</body>
+</html>
